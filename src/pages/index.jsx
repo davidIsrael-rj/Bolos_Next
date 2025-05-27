@@ -1,4 +1,4 @@
-import Menu from "@/template/menu";
+import Header from "@/template/header";
 import SiderBar from "@/template/sideBar";
 import TopBar from "@/template/topBar";
 
@@ -7,6 +7,7 @@ export default function Home() {
     <div className={`flex flex-row justify-center p-4 `}>
       <SiderBar/>
       <TopBar/>
+      <Header/>
     </div>
   );
 }
