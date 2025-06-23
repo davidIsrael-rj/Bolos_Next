@@ -7,6 +7,7 @@ export default function Home() {
   return (
     // <div className={`flex flex-row justify-center p-4 `}>
     <div className={"area"}>
+      <Menu/>
       <SiderBar/>
       <TopBar/>
       <Header/>

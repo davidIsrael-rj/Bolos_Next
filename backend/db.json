@@ -1,0 +1,11 @@
+{
+    "users": [{
+        "id": 1,
+        "name": "Jose Alencar",
+        "email": "alencar@ig.com.br"
+    },{
+        "id": 2,
+        "name": "Roberto Oliveira",
+        "email": "roberto@ig.com.br"
+    }]
+}

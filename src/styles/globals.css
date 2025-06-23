@@ -5,6 +5,11 @@
 :root {
   --background: #e4c2ed;
   --foreground: #767776;
+  --logo-height: 100px;
+  --header-height:100px;
+  --menu-top-height: 70px;
+  --aside-width: 225px;
+  --footer-height: 40px;
 }
 
 body {
@@ -22,10 +27,9 @@ body {
         1fr
         var(--footer-height);
     grid-template-areas: 
-        "logo header"
-        "menu content"
-        "menu footer";
+        "header menu"
+        "topbar menu";
     height: 100vh;
-    background-color: #f5f5f5;
+    background-color: var(--background);
 }
 
