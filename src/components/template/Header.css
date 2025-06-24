@@ -1,5 +1,5 @@
 header.header{
-    background-color: #e9b9f6;
+    background-color: var(--backgroundSecond);
     padding: 0px 15px;
     overflow: hidden;
     white-space: nowrap;
