@@ -6,9 +6,9 @@ import Nav from "@/components/template/Nav";
 import React from "react";
 
 export default props =>
-    <>
+    <div className="appBolo">
         <Logo/>
         <Nav />
         <Main/>
         <Footer/>
-    </>
+    </div>
