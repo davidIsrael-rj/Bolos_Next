@@ -1,3 +1,5 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'font-awesome/css/font-awesome.min.css'
 import './AppBolo.css'
 import Footer from "@/components/template/Footer";
 import Logo from "@/components/template/Logo";
@@ -7,8 +9,9 @@ import React from "react";
 
 export default props =>
     <div className="appBolo">
-        <Logo/>
+        <Logo />
         <Nav />
-        <Main/>
-        <Footer/>
+        <Main icon="home" title="Início"
+            subtitle="Bolos feitos com carinhos" />
+        <Footer />
     </div>
