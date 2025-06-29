@@ -12,6 +12,10 @@ export default props =>
         <Logo />
         <Nav />
         <Main icon="home" title="Início"
-            subtitle="Bolos feitos com carinhos" />
+            subtitle="Bolos feitos com carinhos" >
+              <div className="display-4">Bem Vindo!</div> 
+              <hr />
+              <p className="mb-0">Loja de Bolos</p> 
+        </Main>
         <Footer />
     </div>
