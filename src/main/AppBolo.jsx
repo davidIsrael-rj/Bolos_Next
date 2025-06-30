@@ -8,9 +8,9 @@ import React from "react";
 import Home from '@/components/home/Home';
 
 export default props =>
-    <div className="appBolo">
-        <Logo />
-        <Nav />
-        <Home/> 
-        <Footer />
-    </div>
+        <div className="appBolo">
+            <Logo />
+            <Nav />
+            
+            <Footer />
+        </div>

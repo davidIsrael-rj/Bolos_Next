@@ -6,11 +6,72 @@
   --background: #e4c2ed;
   --backgroundSecond: #e9b9f6;
   --foreground: #767776;
+   --bg-dark: #1a2f3a;
+
+    --logo-height: 100px;
+    --header-height: 100px;
+    --aside-width: 225px;
+    --footer-height: 40px;
+
+    --shadow:
+        0 2px 23px 0 rgba(0, 0, 0, 0.1),
+        0 2px 49px 0 rgba(0, 0, 0, 0.06);
 }
 
-body {
+
+* {
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* body {
   color: var(--foreground);
   background: var(--background);
+} */
+
+.appBolo {
+    margin: 0px;
+    display: grid;
+    /*Largura da primeira coluna definido pela variável e a segunda coluna o que restar de espaço */
+    grid-template-columns: var(--aside-width) 1fr;
+
+    /*altura das linhas*/
+
+    grid-template-rows:
+        var(--header-height) /*altura do cabeçalho*/
+        1fr /*um frame, o maximo que der*/
+        var(--footer-height);/* altura do rodapé*/
+
+        /*Definindo onde cada componente ira ficar, esse projeto tem seis áreas para preencher */
+    grid-template-areas: 
+        "logo header"
+        "menu content"
+        "menu footer" ; 
+    height: 100vh;
+    background-color: #e4c2ed;      ;
+}
+
+/*Definindo os nomes das áreas dos componentes, */
+/*para que eles fiquem alinhados conforme foi organizado na grid-template-areas */
+
+aside.logo{
+    grid-area: logo;
+}
+
+header.header{
+    grid-area: header;
+}
+
+aside.menu-area{
+    grid-area: menu;
+}
+
+main.content {
+    grid-area: content;
+}
+
+footer.footer{
+    grid-area: footer;
 }
 
 
