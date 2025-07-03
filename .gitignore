@@ -11,6 +11,9 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+/backend/db.json
+*.db.json
+*./db.json
 
 # testing
 /coverage
