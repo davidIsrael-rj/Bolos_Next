@@ -3,13 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #e4c2ed;
-  --backgroundSecond: #e9b9f6;
-  --foreground: #767776;
-   --bg-dark: #1a2f3a;
+    --background: #e4c2ed;
+    --backgroundSecond: #e9b9f6;
+    --foreground: #767776;
+    --bg-dark: #1a2f3a;
 
     --logo-height: 100px;
     --header-height: 100px;
+    --menu-top-height: 100px;
     --aside-width: 225px;
     --footer-height: 40px;
 
@@ -38,31 +39,50 @@
     /*altura das linhas*/
 
     grid-template-rows:
-        var(--header-height) /*altura do cabeçalho*/
-        1fr /*um frame, o maximo que der*/
-        var(--footer-height);/* altura do rodapé*/
+        var(--header-height)
+        /*altura do cabeçalho*/
+        1fr
+        /*um frame, o maximo que der*/
+        var(--footer-height);
+    /* altura do rodapé*/
 
-        /*Definindo onde cada componente ira ficar, esse projeto tem seis áreas para preencher */
-    grid-template-areas: 
+    /*Definindo onde cada componente ira ficar, esse projeto tem seis áreas para preencher */
+    grid-template-areas:
         "logo header"
         "menu content"
-        "menu footer" ; 
+        "menu footer";
     height: 100vh;
-    background-color: #e4c2ed;      ;
+    background-color: #e4c2ed;
+    ;
 }
 
 /*Definindo os nomes das áreas dos componentes, */
 /*para que eles fiquem alinhados conforme foi organizado na grid-template-areas */
 
-aside.logo{
+@media(max-width: 768px) {
+    .appBolo {
+        grid-template-rows:
+            var(--header-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height);
+        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-areas: 
+            "logo header"
+            "menu menu"
+            "content content"
+            "footer footer";
+    }
+}
+aside.logo {
     grid-area: logo;
 }
 
-header.header{
+header.header {
     grid-area: header;
 }
 
-aside.menu-area{
+aside.menu-area {
     grid-area: menu;
 }
 
@@ -70,9 +90,6 @@ main.content {
     grid-area: content;
 }
 
-footer.footer{
+footer.footer {
     grid-area: footer;
 }
-
-
-
