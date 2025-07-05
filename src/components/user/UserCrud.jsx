@@ -29,7 +29,13 @@ export default class UserCrud extends Component {
         this.setState({user})
     }
 
-    
+    remove(user){
+        axios.delete(`${baseUrl}/${user.id}`).then(resp =>{
+            const list = this.getUpdatedList(null)
+            this.setState({list})
+        })
+    }
+
     clear() {
         this.setState({ user: initialState.user })
     }
