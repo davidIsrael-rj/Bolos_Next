@@ -25,6 +25,11 @@ export default class UserCrud extends Component {
         })
     }
 
+    load(user){
+        this.setState({user})
+    }
+
+    
     clear() {
         this.setState({ user: initialState.user })
     }
@@ -42,7 +47,7 @@ export default class UserCrud extends Component {
 
     getUpdatedList(user) {
         const list = this.state.list.filter(u => u.id !== user.id)
-        list.unshift(user)
+        if (user) list.unshift(user)
         return list
     }
 
