@@ -13,9 +13,7 @@ export default function App({ Component, pageProps }) {
     <div className="appBolo">
       <Logo />
       <Nav />
-      <div className="content">
-        <Component {...pageProps} />
-      </div>
+      <Component {...pageProps} />
       <Footer />
     </div>
   );
