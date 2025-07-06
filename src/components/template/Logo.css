@@ -11,3 +11,9 @@ aside.logo img {
     object-fit: cover;
     padding: 0px;
 }
+
+@media(max-width: 576px){
+    aside.logo img{
+        width: 350px;
+    }
+}
