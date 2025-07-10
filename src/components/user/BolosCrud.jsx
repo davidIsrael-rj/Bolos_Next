@@ -27,6 +27,12 @@ export default class BolosCrud extends Component {
         })
     }
 
+    load(bolos){
+        this.setState({bolos})
+    }
+
+    
+
     render() {
         return (
             <Main {...headerProps}>
