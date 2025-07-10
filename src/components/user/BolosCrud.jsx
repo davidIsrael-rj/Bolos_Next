@@ -6,7 +6,20 @@ const headerProps = {
     title: 'Bolos',
     subtitle: 'Cadastro de Bolos: Incluir, Listar, Alterar e Excluir!!!'
 }
+
+const baseUrl = 'http://localhost:3001/bolos'
+
+const initialState ={
+    bolos:{name:'', recheio:'', preco:''},
+    list:[]
+}
+
+
 export default class BolosCrud extends Component {
+
+    state ={...initialState}
+    
+
     render() {
         return (
             <Main {...headerProps}>
