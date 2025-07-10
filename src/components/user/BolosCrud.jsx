@@ -1,5 +1,7 @@
+import axios from "axios";
 import Main from "../template/Main";
 import React, { Component } from "react";
+import { list } from "postcss";
 
 const headerProps = {
     icon: 'birthday-cake',
@@ -9,16 +11,21 @@ const headerProps = {
 
 const baseUrl = 'http://localhost:3001/bolos'
 
-const initialState ={
-    bolos:{name:'', recheio:'', preco:''},
-    list:[]
+const initialState = {
+    bolos: { name: '', recheio: '', preco: '' },
+    list: []
 }
 
 
 export default class BolosCrud extends Component {
 
-    state ={...initialState}
-    
+    state = { ...initialState }
+
+    componentDidMount() {
+        axios(baseUrl).then(resp => {
+            this.setState({ list: resp.data })
+        })
+    }
 
     render() {
         return (
