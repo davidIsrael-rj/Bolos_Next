@@ -2,6 +2,7 @@ import axios from "axios";
 import Main from "../template/Main";
 import React, { Component } from "react";
 import { list } from "postcss";
+import bolos from "@/pages/bolos";
 
 const headerProps = {
     icon: 'birthday-cake',
@@ -27,11 +28,18 @@ export default class BolosCrud extends Component {
         })
     }
 
-    load(bolos){
-        this.setState({bolos})
+    load(bolos) {
+        this.setState({ bolos })
     }
 
-    
+    remove(bolos) {
+        axios.delete(`${baseUrl}/${bolos.id}`).then(resp => {
+            const list = this.getUpdateList(bolos, false)
+            this.setState({ list })
+        })
+    }
+
+
 
     render() {
         return (
