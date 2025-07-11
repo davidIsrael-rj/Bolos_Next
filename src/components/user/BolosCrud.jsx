@@ -60,6 +60,12 @@ export default class BolosCrud extends Component {
         return list
     }
 
+    updateField(event) {
+        const bolos = { ...this.state.bolos }
+        bolos[event.target.name] = event.target.value
+        this.setState({ bolos })
+    }
+
 
 
     render() {
