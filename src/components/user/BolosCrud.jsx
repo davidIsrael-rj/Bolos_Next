@@ -42,7 +42,17 @@ export default class BolosCrud extends Component {
     clear(){
         this.setState({bolos: initialState.bolos})
     }
-    
+
+    save(){
+        const bolos = this.state.bolos
+        const method = bolos.id ? 'put' : 'post'
+        const url = bolos.id ? `${baseUrl}/${bolos.id}` : baseUrl
+        axios[method](url, bolos)
+            .then(resp =>{
+                const list = this.getUpdateList(resp.data)
+                this.setState({bolos: initialState.bolos, list})
+            })
+    }
 
 
 
