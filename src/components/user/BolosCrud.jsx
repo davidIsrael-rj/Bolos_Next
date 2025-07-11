@@ -39,6 +39,11 @@ export default class BolosCrud extends Component {
         })
     }
 
+    clear(){
+        this.setState({bolos: initialState.bolos})
+    }
+    
+
 
 
     render() {
