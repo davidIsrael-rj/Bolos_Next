@@ -67,11 +67,49 @@ export default class BolosCrud extends Component {
     }
 
 
+    renderForm() {
+        return (
+            <div className="form">
+                <dir className="row">
+                    <div className="col-12 col-md-6">
+                        <div className="form-group">
+                            <label>Nome</label>
+                            <input type="text" className="form-control"
+                                name="name"
+                                value={this.state.bolos.name}
+                                onChange={e => this.updateField(e)}
+                                placeholder="Digite o nome..." />
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <div className="form-group">
+                            <label>Recheio</label>
+                            <input type="text" className="form-control"
+                                name="recheio"
+                                value={this.state.bolos.recheio}
+                                onChange={e => this.updateField(e)}
+                                placeholder="Digite o recheio..." />
+                        </div>
+                    </div>
+                    <div className="col-12 col-md-6">
+                        <div className="form-group">
+                            <label>Preço</label>
+                            <input type="text" className="form-control"
+                                name="preco"
+                                value={this.state.bolos.preco}
+                                onChange={e => this.updateField(e)}
+                                placeholder="Digite o preço..." />
+                        </div>
+                    </div>
+                </dir>
+            </div>
+        )
+    }
 
     render() {
         return (
             <Main {...headerProps}>
-                <h1>Bolos</h1>
+                {this.renderForm()}
             </Main>
         )
     }
