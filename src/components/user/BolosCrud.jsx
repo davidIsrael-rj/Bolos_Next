@@ -106,10 +106,35 @@ export default class BolosCrud extends Component {
         )
     }
 
+    renderTable(){
+        return(
+            <table className="table mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Recheio</th>
+                        <th>Preço</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.renderRows()}
+                </tbody>
+            </table>
+        )
+    }
+
+    renderRows(){
+        return(
+            <div>dados</div>
+        )
+    }
+
     render() {
         return (
             <Main {...headerProps}>
                 {this.renderForm()}
+                {this.renderTable()}
             </Main>
         )
     }
