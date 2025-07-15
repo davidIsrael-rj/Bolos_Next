@@ -102,6 +102,18 @@ export default class BolosCrud extends Component {
                         </div>
                     </div>
                 </dir>
+                <div className="row">
+                    <div className="col-12 d-flex justify-content-end">
+                        <button className="btn btn-primary"
+                            onClick={e => this.save(e)}>
+                            Salvar
+                        </button>
+                        <button className="btn btn-secondary ml-2"
+                            onClick={e => this.clear(e)}>
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
             </div>
         )
     }
@@ -115,6 +127,7 @@ export default class BolosCrud extends Component {
                         <th>Nome</th>
                         <th>Recheio</th>
                         <th>Preço</th>
+                        <th>Ações</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -125,9 +138,26 @@ export default class BolosCrud extends Component {
     }
 
     renderRows(){
-        return(
-            <div>dados</div>
-        )
+        return this.state.list.map(bolo => {
+            return(
+                <tr key={bolo.id}>
+                    <td>{bolo.id}</td>
+                    <td>{bolo.name}</td>
+                    <td>{bolo.recheio}</td>
+                    <td>{bolo.preco}</td>
+                    <td>
+                        <button className="btn btn-warning"
+                            onClick={() => this.load(bolo)}>
+                            <i className="fa fa-pencil"></i>
+                        </button>
+                        <button className="btn btn-danger ml-2"
+                            onClick={() => this.remove(bolo)}>
+                            <i className="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            )
+        })
     }
 
     render() {
