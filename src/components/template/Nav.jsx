@@ -14,5 +14,8 @@ export default props =>
              <Link href="/bolos">
                     <i className="fa fa-birthday-cake"></i> Bolos
             </Link>
+             <Link href="/clientes">
+                    <i className="fa fa-address-card"></i> Clientes
+            </Link>
         </nav>
     </aside>
