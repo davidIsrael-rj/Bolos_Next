@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Main from "../template/Main";
+import axios from "axios";
 
 const headerProps = {
     icon: 'address-card',
@@ -25,6 +26,11 @@ export default class ClientesCrud extends Component {
 
     state = {...initialState}
 
+    componentDidMount(){
+        axios(baseUrl).then(resp => {
+            this.setState({list: resp.data})
+        })
+    }
 
     render() {
         return (
