@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Main from "../template/Main";
 import axios from "axios";
+import clientes from "@/pages/clientes";
 
 const headerProps = {
     icon: 'address-card',
@@ -53,9 +54,29 @@ export default class ClientesCrud extends Component {
         )
     }
     renderRows() {
-        return (
-            <div>Clientes</div>
-        )
+        return this.state.list.map(clientes =>{
+            return(
+                <tr key={clientes.id}>
+                    <td>{clientes.id}</td>
+                    <td>{clientes.name}</td>
+                    <td>{clientes.endereco}</td>
+                    <td>{clientes.numero}</td>
+                    <td>{clientes.bairro}</td>
+                    <td>{clientes.municipio}</td>
+                    <td>{clientes.estado}</td>
+                    <td>
+                        <button className="btn btn-warning">
+                            <i className="fa fa-pencil"></i>
+                        </button>
+                        <button className="btn btn-danger ml-2">
+                            <i className="fa fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            )
+        })
+           
+        
     }
     render() {
         return (
