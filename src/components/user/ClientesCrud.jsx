@@ -24,18 +24,43 @@ const initialState = {
 
 export default class ClientesCrud extends Component {
 
-    state = {...initialState}
+    state = { ...initialState }
 
-    componentDidMount(){
+    componentDidMount() {
         axios(baseUrl).then(resp => {
-            this.setState({list: resp.data})
+            this.setState({ list: resp.data })
         })
     }
-
+    renderTable() {
+        return (
+            <table className="table mt-4">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Endereço</th>
+                        <th>Numero</th>
+                        <th>Bairro</th>
+                        <th>Município</th>
+                        <th>Estado</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.renderRows()}
+                </tbody>
+            </table>
+        )
+    }
+    renderRows() {
+        return (
+            <div>Clientes</div>
+        )
+    }
     render() {
         return (
             <Main {...headerProps}>
-                <h1>Clientes</h1>
+                {this.renderTable()}
             </Main>
         )
     }
