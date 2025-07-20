@@ -32,6 +32,11 @@ export default class ClientesCrud extends Component {
             this.setState({ list: resp.data })
         })
     }
+
+    load(clientes){
+        this.setState({clientes})
+    }
+    
     renderTable() {
         return (
             <table className="table mt-4">
