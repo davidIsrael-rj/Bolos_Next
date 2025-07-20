@@ -36,7 +36,14 @@ export default class ClientesCrud extends Component {
     load(clientes){
         this.setState({clientes})
     }
-    
+
+    remove(clientes){
+        axios.delete(`${baseUrl}/${clientes.id}`).then(resp =>{
+            const list = this.getUpdatedList(clientes, false)
+            this.setState({list})
+        })
+    }
+
     renderTable() {
         return (
             <table className="table mt-4">
