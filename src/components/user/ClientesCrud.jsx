@@ -44,6 +44,10 @@ export default class ClientesCrud extends Component {
         })
     }
 
+    clear(){
+        this.setState({clientes: initialState.clientes})
+    }
+
     renderTable() {
         return (
             <table className="table mt-4">
