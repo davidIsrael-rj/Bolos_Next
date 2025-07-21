@@ -48,6 +48,18 @@ export default class ClientesCrud extends Component {
         this.setState({clientes: initialState.clientes})
     }
 
+    save(){
+        const cliente = this.state.clientes
+        const method = cliente.id ? 'put' : 'post'
+        const url = cliente.id ? `${baseUrl}/${cliente.id}` : baseUrl
+        axios[method](url, cliente)
+        .then(resp =>{
+            const list = this.getUpdatedList(resp.data)
+            this.setState({clientes: initialState.clientes, list})
+        })
+    }
+
+
     renderTable() {
         return (
             <table className="table mt-4">
