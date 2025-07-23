@@ -33,30 +33,36 @@ export default class ClientesCrud extends Component {
         })
     }
 
-    load(clientes){
-        this.setState({clientes})
+    load(clientes) {
+        this.setState({ clientes })
     }
 
-    remove(clientes){
-        axios.delete(`${baseUrl}/${clientes.id}`).then(resp =>{
+    remove(clientes) {
+        axios.delete(`${baseUrl}/${clientes.id}`).then(resp => {
             const list = this.getUpdatedList(clientes, false)
-            this.setState({list})
+            this.setState({ list })
         })
     }
 
-    clear(){
-        this.setState({clientes: initialState.clientes})
+    clear() {
+        this.setState({ clientes: initialState.clientes })
     }
 
-    save(){
+    save() {
         const cliente = this.state.clientes
         const method = cliente.id ? 'put' : 'post'
         const url = cliente.id ? `${baseUrl}/${cliente.id}` : baseUrl
         axios[method](url, cliente)
-        .then(resp =>{
-            const list = this.getUpdatedList(resp.data)
-            this.setState({clientes: initialState.clientes, list})
-        })
+            .then(resp => {
+                const list = this.getUpdatedList(resp.data)
+                this.setState({ clientes: initialState.clientes, list })
+            })
+    }
+
+    getUpdatedList(cliente, add = true) {
+        const list = this.state.list.filter(c => c.id !== clientes.id)
+        if (add) list.unshift(cliente)
+        return list
     }
 
 
@@ -82,8 +88,8 @@ export default class ClientesCrud extends Component {
         )
     }
     renderRows() {
-        return this.state.list.map(clientes =>{
-            return(
+        return this.state.list.map(clientes => {
+            return (
                 <tr key={clientes.id}>
                     <td>{clientes.id}</td>
                     <td>{clientes.name}</td>
@@ -103,8 +109,8 @@ export default class ClientesCrud extends Component {
                 </tr>
             )
         })
-           
-        
+
+
     }
     render() {
         return (
