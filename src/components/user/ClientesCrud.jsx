@@ -65,6 +65,11 @@ export default class ClientesCrud extends Component {
         return list
     }
 
+    updateField(event){
+        const clientes = {...this.state.clientes}
+        user[event.target.name] = event.target.value
+        this.setState({clientes})
+    }
 
     renderTable() {
         return (
