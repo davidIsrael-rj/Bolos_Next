@@ -49,25 +49,25 @@ export default class ClientesCrud extends Component {
     }
 
     save() {
-        const cliente = this.state.clientes
-        const method = cliente.id ? 'put' : 'post'
-        const url = cliente.id ? `${baseUrl}/${cliente.id}` : baseUrl
-        axios[method](url, cliente)
+        const clientes = this.state.clientes
+        const method = clientes.id ? 'put' : 'post'
+        const url = clientes.id ? `${baseUrl}/${clientes.id}` : baseUrl
+        axios[method](url, clientes)
             .then(resp => {
                 const list = this.getUpdatedList(resp.data)
                 this.setState({ clientes: initialState.clientes, list })
             })
     }
 
-    getUpdatedList(cliente, add = true) {
+    getUpdatedList(clientes, add = true) {
         const list = this.state.list.filter(c => c.id !== clientes.id)
-        if (add) list.unshift(cliente)
+        if (add) list.unshift(clientes)
         return list
     }
 
     updateField(event) {
         const clientes = { ...this.state.clientes }
-        user[event.target.name] = event.target.value
+        clientes[event.target.name] = event.target.value
         this.setState({ clientes })
     }
 
@@ -90,7 +90,7 @@ export default class ClientesCrud extends Component {
                             <label>Endereço</label>
                             <input type="text" className="form-control"
                                 name="endereco"
-                                value={this.state.clientes.name}
+                                value={this.state.clientes.endereco}
                                 onChange={e => this.updateField(e)}
                                 placeholder="Digite o Endereço" />
                         </div>
@@ -137,6 +137,19 @@ export default class ClientesCrud extends Component {
                         </div>
                     </div>
                 </div>
+                <hr />
+                <dir className="row">
+                    <div className="col-12 d-flex justify-content-end">
+                        <button className="btn btn-primary"
+                            onClick={e => this.save(e)}>
+                            Salvar
+                        </button>
+                        <button className="btn btn-secondary ml-2"
+                            onClick={e => this.clear(e)}>
+                            Cancelar
+                        </button>
+                    </div>
+                </dir>
             </div>
         )
     }
