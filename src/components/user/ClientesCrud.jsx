@@ -75,7 +75,7 @@ export default class ClientesCrud extends Component {
         return (
             <div className="form">
                 <div className="row">
-                    <div className="col-24 col-md-12">
+                    <div className="col-7 col-sm-12">
                         <div className="form-group">
                             <label>Nome</label>
                             <input type="text" className="form-control"
@@ -85,7 +85,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Nome..." />
                         </div>
                     </div>
-                    <div className="col-20 col-md-10">
+                    <div className="col-7 col-md-10">
                         <div className="form-group">
                             <label>Endereço</label>
                             <input type="text" className="form-control"
@@ -95,7 +95,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Endereço" />
                         </div>
                     </div>
-                    <div className="col-4 col-md-2">
+                    <div className="col-7 col-md-2">
                         <div className="form-group">
                             <label>Numero</label>
                             <input type="text" className="form-control"
@@ -105,7 +105,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Numero" />
                         </div>
                     </div>
-                    <div className="col-6 col-md-3">
+                    <div className="col-7 col-md-4">
                         <div className="form-group">
                             <label>Bairro</label>
                             <input type="text" className="form-control" 
@@ -115,7 +115,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Bairro"/>
                         </div>
                     </div>
-                    <div className="col-6 col-md-3">
+                    <div className="col-7 col-md-4">
                         <div className="form-group">
                             <label>Municipio</label>
                             <input type="text" className="form-control" 
@@ -125,7 +125,7 @@ export default class ClientesCrud extends Component {
                             placeholder="Digite o Municipio"/>
                         </div>
                     </div>
-                    <div className="col-6 col-md-3">
+                    <div className="col-7 col-md-4">
                         <div className="form-group">
                             <label>Estado</label>
                             <input type="text" className="form-control" 
@@ -139,7 +139,7 @@ export default class ClientesCrud extends Component {
                 </div>
                 <hr />
                 <dir className="row">
-                    <div className="col-12 d-flex justify-content-end">
+                    <div className="col-6 col-sm-12 col-md-12 d-flex justify-content-end">
                         <button className="btn btn-primary"
                             onClick={e => this.save(e)}>
                             Salvar
@@ -186,10 +186,12 @@ export default class ClientesCrud extends Component {
                     <td>{clientes.municipio}</td>
                     <td>{clientes.estado}</td>
                     <td>
-                        <button className="btn btn-warning">
+                        <button className="btn btn-warning"
+                        onClick={() => this.load(clientes)}>
                             <i className="fa fa-pencil"></i>
                         </button>
-                        <button className="btn btn-danger ml-2">
+                        <button className="btn btn-danger ml-2"
+                        onClick={() => this.remove(clientes)}>
                             <i className="fa fa-trash"></i>
                         </button>
                     </td>
