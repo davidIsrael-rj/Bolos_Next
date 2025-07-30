@@ -85,7 +85,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Nome..." />
                         </div>
                     </div>
-                    <div className="col-7 col-md-10">
+                    <div className="col-7 col-sm-12 col-md-10">
                         <div className="form-group">
                             <label>Endereço</label>
                             <input type="text" className="form-control"
@@ -95,7 +95,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Endereço" />
                         </div>
                     </div>
-                    <div className="col-7 col-md-2">
+                    <div className="col-7 col-sm-12 col-md-2">
                         <div className="form-group">
                             <label>Numero</label>
                             <input type="text" className="form-control"
@@ -105,7 +105,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Numero" />
                         </div>
                     </div>
-                    <div className="col-7 col-md-4">
+                    <div className="col-7 col-sm-12 col-md-4">
                         <div className="form-group">
                             <label>Bairro</label>
                             <input type="text" className="form-control" 
@@ -115,7 +115,7 @@ export default class ClientesCrud extends Component {
                                 placeholder="Digite o Bairro"/>
                         </div>
                     </div>
-                    <div className="col-7 col-md-4">
+                    <div className="col-7 col-sm-12 col-md-4">
                         <div className="form-group">
                             <label>Municipio</label>
                             <input type="text" className="form-control" 
@@ -125,7 +125,7 @@ export default class ClientesCrud extends Component {
                             placeholder="Digite o Municipio"/>
                         </div>
                     </div>
-                    <div className="col-7 col-md-4">
+                    <div className="col-7 col-sm-12 col-md-4">
                         <div className="form-group">
                             <label>Estado</label>
                             <input type="text" className="form-control" 
