@@ -7,25 +7,15 @@ import Link from "next/link";
 
 export default function Home(props) {
 
-    useEffect(() => {
-        // Só roda no navegador
-        import('bootstrap/dist/js/bootstrap.bundle.min.js');
-    }, []);
-
-    return (
-
+     return (
         <Main icon="home" title="Início"
             subtitle="Bolos feitos com carinhos" >
-            <div className="display-4">Bem Vindo!</div>
+            <div id="bemVindo" className="display-4">Bem Vindo!</div>
             <hr />
-            <p className="mb-0">Loja de Bolos</p>
             <div className={styles.conteudo}>
                 <nav className={`navbar-expand-lg navbar-light ${styles.margin} ${styles.navbar}`}>
-                    <Link className="navbar-brand" href="/">
-                        {/* <Image src={logo} width="200" alt="Logo" /> */}
-                    </Link>
-                    <div className="navbar-collapse " id="navbarNav">
-                        <ul className="navbar-nav">
+                    <div id="navbarNav" className="d-flex justify-content-center w-100" >
+                        <ul className="navbar-nav d-flex justify-content-evenly w-100">
                             <li className="nav-item">
                                 <a className="nav-link" href="#quemsomos">Quem Somos</a>
                             </li>
@@ -43,8 +33,8 @@ export default function Home(props) {
                 </nav>
                 <section id="quemsomos">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.quemSomos}`}>
-                        <a className="nav-link" href="#navbarNav">
-                        <h3 className={styles.margin}>Quem Somos</h3>
+                        <a className="nav-link" href="#bemVindo">
+                            <h3 className={styles.margin}>Quem Somos</h3>
                         </a>
                         <Image src={logo} className="rounded-circle" width="400" height="400" />
                         <h3>Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
@@ -52,21 +42,23 @@ export default function Home(props) {
                 </section>
                 <section id="parceiros">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.parceiros}`}>
-                        <h3 className={styles.margin}>PARCEIROS</h3>
+                        <a className="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+                            <h3 className={styles.margin}>PARCEIROS</h3>
+                        </a>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-4">
-                                    <a href="https://digitalinnovation.one/" target="_blank">
+                                     <a className="nav-link" href="#bemVindo">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
                                 <div className="col-lg-4">
-                                    <a href="https://digitalinnovation.one/" target="_blank">
+                                    <a href="#bemVindo" target="_blank">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
                                 <div className="col-lg-4">
-                                    <a href="https://digitalinnovation.one/" target="_blank">
+                                    <a href="#bemVindo" target="_blank">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
@@ -76,7 +68,9 @@ export default function Home(props) {
                 </section>
                 <section id="servicos">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.servicos}`}>
-                        <h3 className={styles.margin}>SERVIÇOS</h3>
+                        <a className="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+                            <h3 className={styles.margin}>SERVIÇOS</h3>
+                        </a>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-4">
@@ -97,7 +91,9 @@ export default function Home(props) {
                 </section>
                 <section id="contatos">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.contatos}`}>
-                        <h3 className={styles.margin}>CONTATOS</h3>
+                        <a className="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
+                            <h3 className={styles.margin}>CONTATOS</h3>
+                        </a>
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-6">
