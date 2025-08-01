@@ -20,26 +20,11 @@ export default function Home(props) {
             <hr />
             <p className="mb-0">Loja de Bolos</p>
             <div className={styles.conteudo}>
-                <nav className={`navbar navbar-expand-lg navbar-light ${styles.margin} ${styles.navbar}`}>
+                <nav className={`navbar-expand-lg navbar-light ${styles.margin} ${styles.navbar}`}>
                     <Link className="navbar-brand" href="/">
-                        <Image src={logo} width="200" alt="Logo" />
+                        {/* <Image src={logo} width="200" alt="Logo" /> */}
                     </Link>
-
-                    {/* Botão de toggle */}
-                    <button
-                        className="navbar-toggler"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#navbarNav"
-                        aria-controls="navbarNav"
-                        aria-expanded="false"
-                        aria-label="Toggle navigation"
-                    >
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-
-                    {/* Itens colapsáveis */}
-                    <div className="collapse navbar-collapse" id="navbarNav">
+                    <div className="navbar-collapse " id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
                                 <a className="nav-link" href="#quemsomos">Quem Somos</a>
@@ -58,7 +43,9 @@ export default function Home(props) {
                 </nav>
                 <section id="quemsomos">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.quemSomos}`}>
+                        <a className="nav-link" href="#navbarNav">
                         <h3 className={styles.margin}>Quem Somos</h3>
+                        </a>
                         <Image src={logo} className="rounded-circle" width="400" height="400" />
                         <h3>Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
                     </div>
