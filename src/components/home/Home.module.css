@@ -1,0 +1,32 @@
+.conteudo{
+    font: 20px Arial, sans-serif;
+}
+.navbar{
+    background-color: #ef9be9;
+}
+.quemSomos{
+    background-color: #2E2E2E;
+    color: white;
+}
+.margin{
+    
+    padding-bottom: 50px;
+    padding-top: 10px;
+}
+.parceiros{
+    background-color: #585858 ;
+}
+.servicos{
+    background-color: #848484;
+}
+.contatos{
+    background-color: #D8D8D8;
+}
+
+.bgFooter{
+    background-color: black;
+    color:white;
+}
+.telEmail{
+    color: black;
+}
