@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function Home(props) {
 
-     return (
+    return (
         <Main icon="home" title="Início"
             subtitle="Bolos feitos com carinhos" >
             <div id="bemVindo" className="display-4">Bem Vindo!</div>
@@ -36,7 +36,7 @@ export default function Home(props) {
                         <a className="nav-link" href="#bemVindo">
                             <h3 className={styles.margin}>Quem Somos</h3>
                         </a>
-                        <Image src={logo} className="rounded-circle" width="400" height="400" />
+                            <Image src={logo} className="rounded-circle mx-auto d-block " width="400" height="400" />
                         <h3>Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
                     </div>
                 </section>
@@ -48,7 +48,7 @@ export default function Home(props) {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-3">
-                                     <a className="nav-link" href="#bemVindo">
+                                    <a className="nav-link" href="#bemVindo">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
@@ -67,11 +67,11 @@ export default function Home(props) {
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
-                             
+
                             </div>
                             <div className="row mt-4">
                                 <div className="col-lg-3">
-                                     <a className="nav-link" href="#bemVindo">
+                                    <a className="nav-link" href="#bemVindo">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
@@ -90,7 +90,7 @@ export default function Home(props) {
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
-                             
+
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ export default function Home(props) {
                         <div className="container">
                             <div className="row">
                                 <div className="col-lg-4">
-                                    <p>Quem ainda não tem, pode começar justamente pelos nossos aplicativos, para aumentar suas vendas.</p>
+                                    <p>Quem ainda não tem, pode começar justamente pelos nossos aplicativos.</p>
                                     <Image src={logo} width="100%" />
                                 </div>
                                 <div className="col-lg-4">
