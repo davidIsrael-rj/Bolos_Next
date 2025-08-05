@@ -49,7 +49,7 @@ export default function Home(props) {
                                 width: '200px',
                             }}
                         />
-                        <h3>Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
+                        <h3 className="mt-5">Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
                     </div>
                 </section>
                 <section id="parceiros">
