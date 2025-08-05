@@ -47,21 +47,50 @@ export default function Home(props) {
                         </a>
                         <div className="container">
                             <div className="row">
-                                <div className="col-lg-4">
+                                <div className="col-lg-3">
                                      <a className="nav-link" href="#bemVindo">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
-                                <div className="col-lg-4">
-                                    <a href="#bemVindo" target="_blank">
+                                <div className="col-lg-3">
+                                    <a href="#bemVindo" target="_self">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
-                                <div className="col-lg-4">
-                                    <a href="#bemVindo" target="_blank">
+                                <div className="col-lg-3">
+                                    <a href="#bemVindo" target="_top">
                                         <Image src={logo} width="50%" />
                                     </a>
                                 </div>
+                                <div className="col-lg-3">
+                                    <a href="#bemVindo" target="_top">
+                                        <Image src={logo} width="50%" />
+                                    </a>
+                                </div>
+                             
+                            </div>
+                            <div className="row mt-4">
+                                <div className="col-lg-3">
+                                     <a className="nav-link" href="#bemVindo">
+                                        <Image src={logo} width="50%" />
+                                    </a>
+                                </div>
+                                <div className="col-lg-3">
+                                    <a href="#bemVindo" target="_self">
+                                        <Image src={logo} width="50%" />
+                                    </a>
+                                </div>
+                                <div className="col-lg-3">
+                                    <a href="#bemVindo" target="_top">
+                                        <Image src={logo} width="50%" />
+                                    </a>
+                                </div>
+                                <div className="col-lg-3">
+                                    <a href="#bemVindo" target="_top">
+                                        <Image src={logo} width="50%" />
+                                    </a>
+                                </div>
+                             
                             </div>
                         </div>
                     </div>
