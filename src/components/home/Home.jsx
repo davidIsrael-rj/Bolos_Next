@@ -36,7 +36,19 @@ export default function Home(props) {
                         <a className="nav-link" href="#bemVindo">
                             <h3 className={styles.margin}>Quem Somos</h3>
                         </a>
-                            <Image src={logo} className="rounded-circle mx-auto d-block " width="400" height="400" />
+                        <Image
+                            src={logo}
+                            style={{
+                                borderRadius: '50%',
+                                objectFit: 'cover',
+                                display: 'block',
+                                marginLeft: 'auto',
+                                marginRight: 'auto',
+                                maxWidth: 'none',
+                                height: '200px',     // força o valor, sem depender de heranças
+                                width: '200px',
+                            }}
+                        />
                         <h3>Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
                     </div>
                 </section>
