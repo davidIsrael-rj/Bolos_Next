@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import Main from "../template/Main";
 import Image from "next/image";
 import logo from '../../assets/imgs/logo.png'
+import fone from '../../assets/imgs/fone.png'
+import email from '../../assets/imgs/email.png'
 import styles from './Home.module.css'
 import Link from "next/link";
 
@@ -142,7 +144,17 @@ export default function Home(props) {
                                         <a href="tel:2199999999" className={styles.telEmail}>Tel.: (21)9999-9999</a>
                                     </p>
                                     <p>
-                                        <a href="tel:2199999999"><Image src={logo} width="100" /></a>
+                                        <a href="tel:2199999999">
+                                            <Image src={fone} width="90"
+                                                style={{
+                                                    borderRadius: '50%',
+                                                    objectFit: 'cover',
+                                                    display: 'block',
+                                                    marginLeft: 'auto',
+                                                    marginRight: 'auto',
+                                                    maxWidth: 'none',
+                                                }} />
+                                        </a>
                                     </p>
                                 </div>
                                 <div className="col-lg-6">
@@ -150,7 +162,17 @@ export default function Home(props) {
                                         <a href="mailto:davidisrael.rj@gmail.com" className={styles.telEmail}>email : davidisrael.rj@gmail.com</a>
                                     </p>
                                     <p>
-                                        <a href="mailto:davidisrael.rj@gmail.com" ><Image src={logo} width="100" /></a>
+                                        <a href="mailto:davidisrael.rj@gmail.com" >
+                                            <Image src={email} width="100"
+                                                style={{
+                                                    borderRadius: '50%',
+                                                    objectFit: 'cover',
+                                                    display: 'block',
+                                                    marginLeft: 'auto',
+                                                    marginRight: 'auto',
+                                                    maxWidth: 'none',
+                                                }} />
+                                        </a>
                                     </p>
                                 </div>
                             </div>
