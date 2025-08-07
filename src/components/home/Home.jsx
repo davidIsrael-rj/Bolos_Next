@@ -47,8 +47,9 @@ export default function Home(props) {
                                 marginLeft: 'auto',
                                 marginRight: 'auto',
                                 maxWidth: 'none',
-                                height: '200px',     // força o valor, sem depender de heranças
+                                height: '200px',
                                 width: '200px',
+                                boxShadow: '0px 0px 10px 5px rgba(218, 112, 214, 0.7), 0px 0px 40px 5px rgba(255, 0, 255, 0.3)'
                             }}
                         />
                         <h3 className="mt-5">Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
