@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Main from "../template/Main";
 import Image from "next/image";
 import logo from '../../assets/imgs/logo.png'
@@ -15,12 +15,27 @@ export default function Home(props) {
 
 
     const [indiceAtual, setIndiceAtual] = useState(0);
+    const indiceRef = useRef(indiceAtual);
+    const intervaloRef = useRef(null);
+
     const imagens = [
         { src: bolo1, alt: 'Imagem 1' },
         { src: bolo2, alt: 'Imagem 2' },
         { src: bolo3, alt: 'Imagem 3' },
         { src: bolo4, alt: 'Imagem 4' },
     ];
+
+    useEffect(() => {
+        indiceRef.current = indiceAtual;
+    }, [indiceAtual]);
+
+    useEffect(() => {
+        intervaloRef.current = setInterval(() => {
+            setIndiceAtual((indiceRef.current + 1) % imagens.length);
+        }, 3000);
+
+        return () => clearInterval(intervaloRef.current);
+    }, [imagens.length]);
 
     const handleAnterior = () => {
         setIndiceAtual((indiceAtual - 1 + imagens.length) % imagens.length);
