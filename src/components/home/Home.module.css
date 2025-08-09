@@ -48,16 +48,23 @@
 
 .carrosselItem {
   position: absolute;
-  top: 0;
-  left: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 50%;
-  height: 100%;
-  display: none;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .carrosselItem.active {
   display: block;
 }
+
+.carrosselItem.active {
+  opacity: 1;
+}
+
 
 .carrosselAnterior, .carrosselProximo {
   position: absolute;
