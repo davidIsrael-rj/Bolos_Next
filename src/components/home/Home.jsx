@@ -69,12 +69,11 @@ export default function Home(props) {
                         </ul>
                     </div>
                 </nav>
-                <section id="quemsomos">
                    <QuemSomos 
                    titulo={"Quem Somos"}
                    logo={logo}
                    subt={"Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio."}/>
-                </section>
+                   
                 <section id="parceiros">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.parceiros}`}>
                         <a className="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
