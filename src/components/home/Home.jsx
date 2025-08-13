@@ -11,6 +11,7 @@ import email from '../../assets/imgs/email.png'
 import styles from './Home.module.css'
 import Link from "next/link";
 import QuemSomos from "./template_Home/QuemSomos";
+import Parceiros from "./template_Home/Parceiros";
 
 export default function Home(props) {
 
@@ -69,66 +70,15 @@ export default function Home(props) {
                         </ul>
                     </div>
                 </nav>
-                   <QuemSomos 
-                   titulo={"Quem Somos"}
-                   logo={logo}
-                   subt={"Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio."}/>
-                   
-                <section id="parceiros">
-                    <div className={`container-fluid text-center ${styles.margin} ${styles.parceiros}`}>
-                        <a className="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
-                            <h3 className={styles.margin}>PARCEIROS</h3>
-                        </a>
-                        <div className="container">
-                            <div className="row">
-                                <div className="col-lg-3">
-                                    <a className="nav-link" href="#bemVindo">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
-                                <div className="col-lg-3">
-                                    <a href="#bemVindo" target="_self">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
-                                <div className="col-lg-3">
-                                    <a href="#bemVindo" target="_top">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
-                                <div className="col-lg-3">
-                                    <a href="#bemVindo" target="_top">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
+                <QuemSomos
+                    titulo={"Quem Somos"}
+                    logo={logo}
+                    subt={"Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio."} />
 
-                            </div>
-                            <div className="row mt-4">
-                                <div className="col-lg-3">
-                                    <a className="nav-link" href="#bemVindo">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
-                                <div className="col-lg-3">
-                                    <a href="#bemVindo" target="_self">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
-                                <div className="col-lg-3">
-                                    <a href="#bemVindo" target="_top">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
-                                <div className="col-lg-3">
-                                    <a href="#bemVindo" target="_top">
-                                        <Image src={logo} width="50%" />
-                                    </a>
-                                </div>
+                <Parceiros 
+                titulo={"PARCEIROS"}
+                logo={logo} />
 
-                            </div>
-                        </div>
-                    </div>
-                </section>
                 <section id="servicos">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.servicos}`}>
                         <a className="nav-link" href="#" onclick="window.scrollTo({ top: 0, behavior: 'smooth' }); return false;">
