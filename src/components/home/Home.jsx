@@ -11,11 +11,12 @@ import Parceiros from "./template_Home/Parceiros";
 import Servicos from "./template_Home/Servicos";
 import Carrossel from "./template_Home/Carrossel";
 import Contatos from "./template_Home/Contatos";
+import Rodape from "./template_Home/Rodape";
 
 export default function Home(props) {
 
 
-   
+
     return (
         <Main icon="home" title="Início"
             subtitle="Bolos feitos com carinhos" >
@@ -44,22 +45,16 @@ export default function Home(props) {
                     titulo={"Quem Somos"}
                     logo={logo}
                     subt={"Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio."} />
-
-                <Parceiros 
-                titulo={"PARCEIROS"}
-                logo={logo} />
-
+                <Parceiros
+                    titulo={"PARCEIROS"}
+                    logo={logo} />
                 <Servicos
-                titulo={"SERVIÇOS"}
-                logo={logo}
+                    titulo={"SERVIÇOS"}
+                    logo={logo}
                 />
-
-               <Carrossel/>
-
-                <Contatos/>
-                <footer className={`container-fluid text-center ${styles.bgFooter} ${styles.margin}`}>
-                    <p>Desenvolvido por David Santos</p>
-                </footer>
+                <Carrossel />
+                <Contatos />
+               <Rodape/>
             </div>
         </Main>
     )
