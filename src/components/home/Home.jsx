@@ -10,6 +10,7 @@ import fone from '../../assets/imgs/fone.png'
 import email from '../../assets/imgs/email.png'
 import styles from './Home.module.css'
 import Link from "next/link";
+import QuemSomos from "./template_Home/QuemSomos";
 
 export default function Home(props) {
 
@@ -69,26 +70,10 @@ export default function Home(props) {
                     </div>
                 </nav>
                 <section id="quemsomos">
-                    <div className={`container-fluid text-center ${styles.margin} ${styles.quemSomos}`}>
-                        <a className="nav-link" href="#bemVindo">
-                            <h3 className={styles.margin}>Quem Somos</h3>
-                        </a>
-                        <Image
-                            src={logo}
-                            style={{
-                                borderRadius: '50%',
-                                objectFit: 'cover',
-                                display: 'block',
-                                marginLeft: 'auto',
-                                marginRight: 'auto',
-                                maxWidth: 'none',
-                                height: '200px',
-                                width: '200px',
-                                boxShadow: '0px 0px 10px 5px rgba(218, 112, 214, 0.7), 0px 0px 40px 5px rgba(255, 0, 255, 0.3)'
-                            }}
-                        />
-                        <h3 className="mt-5">Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio.</h3>
-                    </div>
+                   <QuemSomos 
+                   titulo={"Quem Somos"}
+                   logo={logo}
+                   subt={"Somos um time comprometido com os resultados, para te ajudar a recomeçar com seu negócio."}/>
                 </section>
                 <section id="parceiros">
                     <div className={`container-fluid text-center ${styles.margin} ${styles.parceiros}`}>
