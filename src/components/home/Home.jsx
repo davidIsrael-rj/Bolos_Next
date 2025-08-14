@@ -1,30 +1,25 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import Main from "../template/Main";
-import Image from "next/image";
 import logo from '../../assets/imgs/logo.png'
-
-
 import styles from './Home.module.css'
-import Link from "next/link";
 import QuemSomos from "./template_Home/QuemSomos";
 import Parceiros from "./template_Home/Parceiros";
 import Servicos from "./template_Home/Servicos";
 import Carrossel from "./template_Home/Carrossel";
+import Carrossel2 from "./template_Home/Carrossel2";
 import Contatos from "./template_Home/Contatos";
 import Rodape from "./template_Home/Rodape";
 import Menu from "./template_Home/Menu";
 
 export default function Home(props) {
-
-
-
     return (
         <Main icon="home" title="Início"
-            subtitle="Bolos feitos com carinhos" >
+        subtitle="Bolos feitos com carinhos" >
+        <Carrossel2 />
             <div id="bemVindo" className="display-4">Bem Vindo!</div>
             <hr />
             <div className={styles.conteudo}>
-                <Menu/>
+                <Menu />
                 <QuemSomos
                     titulo={"Quem Somos"}
                     logo={logo}
@@ -36,9 +31,9 @@ export default function Home(props) {
                     titulo={"SERVIÇOS"}
                     logo={logo}
                 />
-                <Carrossel />
+                {/* <Carrossel /> */}
                 <Contatos />
-               <Rodape/>
+                <Rodape />
             </div>
         </Main>
     )
