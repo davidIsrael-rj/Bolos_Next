@@ -5,7 +5,7 @@ import bolo3 from '../../../assets/imgs/bolo_rosa3.jpg';
 import bolo4 from '../../../assets/imgs/bolo_rosa4.jpg';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Carrosel4.module.css'
-export default function Carrossel4({ altura = 200, velocidade = 1.5 }) {
+export default function Carrossel4({ largura = 150,altura = 100, velocidade = 1.5 }) {
 
   const imagens = [bolo1, bolo2, bolo3, bolo4];
   const trackRef = useRef(null);
@@ -60,14 +60,14 @@ export default function Carrossel4({ altura = 200, velocidade = 1.5 }) {
           <div
             key={i}
             className={styles.item}
-            style={{ width: 300, height: altura }}
+            style={{ width: largura, height: altura }}
           >
             <Image
               src={src}
               alt={`img-${i}`}
-              width={300}
+              width={largura}
               height={altura}
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'contain' }}
               priority
             />
           </div>
