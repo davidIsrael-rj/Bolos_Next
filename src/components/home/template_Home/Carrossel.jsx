@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from '../Home.module.css'
+import styles from './Carrosel1.module.css'
 import { useEffect, useRef, useState } from "react";
 import bolo1 from '../../../assets/imgs/bolo_rosa1.jpg'
 import bolo2 from '../../../assets/imgs/bolo_rosa2.jpg'

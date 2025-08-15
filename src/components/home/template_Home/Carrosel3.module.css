@@ -1,0 +1,35 @@
+/* styles/ImageCarousel.module.css */
+
+.carouselContainer {
+  overflow: hidden; /* Esconde as partes das imagens que estão fora da tela */
+  width: 100%;
+}
+
+.carouselTrack {
+  display: flex; /* Alinha as imagens horizontalmente */
+  animation: scroll-left 40s linear infinite; /* Animação: nome, duração, tipo, repetição */
+  /*
+  - 40s: Duração da animação. Ajuste para mudar a velocidade. Menor = mais rápido.
+  - linear: A velocidade é constante durante toda a animação.
+  - infinite: A animação se repete indefinidamente.
+  */
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused; /* Pausa a animação ao passar o mouse */
+}
+
+.carouselItem {
+  flex-shrink: 0; /* Impede que o item encolha */
+  margin-right: 20px; /* Espaçamento entre as imagens */
+}
+
+/* A animação em si */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0); /* Começa na posição inicial */
+  }
+  100% {
+    transform: translateX(-50%); /* Move para a esquerda em 50% do seu tamanho total */
+  }
+}
