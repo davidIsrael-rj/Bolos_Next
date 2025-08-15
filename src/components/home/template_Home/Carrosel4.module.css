@@ -1,25 +1,31 @@
 .carrossel {
   position: relative;
   overflow: hidden;
-  width: 100%;       /* ocupa toda a largura disponível do container pai */
-  max-width: 100%; /* limita a largura máxima se quiser */
-  margin: 0 auto;    /* centraliza horizontalmente */
+  width: 100%;       /* ocupa toda a largura do container pai */
+  max-width: 100%;
+  margin: 0 auto;
   background: #111;
 }
 
 .track {
-  display: flex;          /* mantém as imagens em linha */
-  flex-wrap: nowrap;      /* evita que quebrem para a próxima linha */
-  overflow: hidden;       /* garante que nada vaze do carrossel */
-  will-change: transform; /* melhora desempenho da animação */
+  display: flex;
+  flex-wrap: nowrap;      /* mantém as imagens em linha */
+  will-change: transform; /* melhora desempenho */
+    animation: mover 20s linear infinite; /* animação contínua */
 }
 
 .item {
-  flex: 0 0 auto; /* impede de esticar */
+  flex: 0 0 auto;         /* impede de esticar */
   position: relative;
   overflow: hidden;
+
 }
 
-.item img {
-  object-fit: cover;
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* move metade da track, duplicação garante continuidade */
+  }
 }
