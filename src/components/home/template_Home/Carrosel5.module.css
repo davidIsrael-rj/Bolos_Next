@@ -8,6 +8,8 @@
   display: flex;
   flex-wrap: nowrap;
   animation: mover linear infinite; /* animação contínua */
+  width: max-content;
+
 }
 
 .item {
@@ -18,9 +20,9 @@
 /* animação contínua do carrossel */
 @keyframes mover {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0); /* metade da track (porque duplicamos as imagens) */
+    transform: translateX(0%); /* metade da track (porque duplicamos as imagens) */
   }
 }
