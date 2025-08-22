@@ -11,7 +11,6 @@
   display: flex;
   flex-wrap: nowrap;      /* mantém as imagens em linha */
   will-change: transform; /* melhora desempenho */
-    animation: mover 20s linear infinite; /* animação contínua */
 }
 
 .item {
@@ -21,11 +20,3 @@
 
 }
 
-@keyframes mover {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%); /* move metade da track, duplicação garante continuidade */
-  }
-}

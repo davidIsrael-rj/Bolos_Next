@@ -12,22 +12,7 @@ export default function Carrossel4({ largura = 150,altura = 100, velocidade = 1.
   const posicao = useRef(0);
   const [imagensDuplicadas, setImagensDuplicadas] = useState(imagens);
 
-  // Duplica as imagens dinamicamente para preencher a largura da tela
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    const larguraTela = window.innerWidth;
-    const larguraItem = 300; // largura fixa de cada item
-    const numItensNecessarios = Math.ceil(larguraTela / larguraItem) + imagens.length;
-
-    const duplicadas = Array(numItensNecessarios)
-      .fill(imagens)
-      .flat();
-    
-    setImagensDuplicadas(duplicadas);
-  }, [imagens]);
-
-  // animação contínua
+   // animação contínua
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
